@@ -1,18 +1,3 @@
-/* eslint-disable prefer-destructuring */
-require('dotenv').config();
-require('./config/database');
-
-const express = require('express');
-
-const app = express();
-
-// Middleware
-const cors = require('cors');
-const logger = require('morgan');
-const isSignedIn = require('./middleware/isSignedIn');
-
-// Routers
-const authRouter = require('./routes/authRouter');
 
 app.use(cors());
 app.use(express.json());
